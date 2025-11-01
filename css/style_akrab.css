@@ -1,0 +1,229 @@
+/* Styling Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1e3c72;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+/* --- Bagian Peringatan Penting --- */
+.important-notice {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px 25px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.notice-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #856404;
+}
+
+.notice-header i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.notice-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.notice-list li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    color: #333;
+}
+
+.notice-list li i {
+    color: #dc3545;
+    margin-right: 5px;
+}
+
+/* --- Daftar Paket (Grid) --- */
+.package-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Styling Kartu Paket */
+.package-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge/Ribbon */
+.ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-top-right-radius: 15px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.package-card.popular {
+    border: 3px solid #ffc107;
+}
+
+.package-card.best-value {
+    border: 3px solid #17a2b8;
+}
+
+/* Header Paket */
+.package-header {
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.kuota-utama {
+    font-size: 3em;
+    color: #007bff;
+    margin: 0;
+    line-height: 1;
+}
+
+.tipe-paket {
+    color: #6c757d;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Harga */
+.package-price-box {
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 2.5em;
+    color: #28a745;
+    font-weight: 700;
+    display: block;
+}
+
+/* Tabel Kuota Area */
+.package-card h4 {
+    color: #343a40;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 5px;
+}
+
+.kuota-table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+
+.kuota-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.kuota-table td {
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.kuota-table td:last-child {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+/* Tombol Pesan */
+.btn-order {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.btn-order:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.package-card.popular .btn-order {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.package-card.popular .btn-order:hover {
+    background-color: #e0a800;
+}
+
+.package-card.best-value .btn-order {
+    background-color: #17a2b8;
+}
+
+.package-card.best-value .btn-order:hover {
+    background-color: #138496;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .package-list-grid {
+        grid-template-columns: 1fr;
+    }
+    .package-card {
+        width: 90%;
+        margin: auto;
+    }
+}
